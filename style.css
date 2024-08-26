@@ -1,0 +1,28 @@
+#content{
+    font-size: 20px;
+}
+
+#ownership{
+    width:"800";
+    height:"400";
+    display: none;
+}
+
+.lab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
