@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Data Visualisation"/>
+    <meta name="keywords"  content="HTML, CSS, D3"/>
+    <meta name="author" content="Khoo Sheng Xiang">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2.3 Drawing Scatter Plot</title>
+    
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body style="background-color: rgb(32, 29, 29);">
+    <a href="../shengxiang_main.html" class="lab-button">Home</a>
+    <a href="Lab2.1.html" class="lab-button">Lab 2.1</a>
+    <a href="Lab2.2.html" class="lab-button">Lab 2.2</a>
+    <a href="Lab2.3.html" class="lab-button">Lab 2.3</a>
+    <a href="Lab2.4.html" class="lab-button">Lab 2.4</a>
+
+    <h1 style="color:white;">Drawing with Scatter Plot</h1>
+    <script>
+        var w=600;
+        var h=200;
+
+        var dataset=[[5,20,2],[480,90,12],[250,50,8],[100,3,6],[330,95,9],[410,12,10],[475,44,11],[25,67,3],[85,21,5],[220,88,7]];
+
+        var svg =d3.select("body")
+                   .append("svg")
+                   .attr("width",w)
+                   .attr("height",h);
+        
+        svg.append("rect")
+            .attr("width", w)
+            .attr("height", h)
+            .attr("fill", "lightgray"); 
+
+        svg.selectAll("circle")
+            .data(dataset)
+            .enter()
+            .append("circle")
+            .attr("cx",function(d,i){
+                return d[0]+12 ;
+            })
+            .attr("cy",function(d){
+                return d[1]+30;    
+            })
+            .attr("r",function(d){
+                return d[2];
+            })
+            .attr("fill","black");
+        
+        
+        svg.selectAll("text")
+            .data(dataset)
+            .enter()
+            .append("text")
+            .text(function(d){
+                return d[0]+","+d[1];
+            })
+            .attr("fill","black")
+            .attr("x",function(d,i){
+                return d[0]-1;
+            })
+            .attr("y",function(d){
+                return d[1]+15;
+            })
+            .style("font-size", "10px");
+    </script>
+    <footer style="color: white;">COS30045 Data Visualisation</footer>
+	<footer style="color: white;">Semester 4 2024</footer>
+	<footer style="color: white;">Khoo Sheng Xiang</footer>
+</body>

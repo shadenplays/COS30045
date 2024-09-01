@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Data Visualisation"/>
+    <meta name="keywords"  content="HTML, CSS, D3"/>
+    <meta name="author" content="Khoo Sheng Xiang">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2.2 D3 Bar chart</title>
+    
+    <script src="https://d3js.org/d3.v7.min.js">
+
+    </script>
+</head>
+<body style="background-color: rgb(32, 29, 29);">
+    <a href="../shengxiang_main.html" class="lab-button">Home</a>
+    <a href="Lab2.1.html" class="lab-button">Lab 2.1</a>
+    <a href="Lab2.2.html" class="lab-button">Lab 2.2</a>
+    <a href="Lab2.3.html" class="lab-button">Lab 2.3</a>
+    <a href="Lab2.4.html" class="lab-button">Lab 2.4</a>
+    
+    <h1 style="color: white;">Drawing with data</h1>
+   
+    
+    <script>
+        var w=500;
+        var h=200;
+
+        var dataset=[15,5,26,23,9,25,8,9];
+
+        var svg =d3.select("body")
+                   .append("svg")
+                   .attr("width",w)
+                   .attr("height",h)
+                   .style("background-color", "lightgray");
+
+        svg.selectAll("rect")
+            .data(dataset)
+            .enter()
+            .append("rect")
+            .attr("x",function(d,i){
+                return i * (w/dataset.length);
+            })
+            .attr("y",function(d){
+                return 2;
+            })
+            .attr("width",function(d){
+                return w/dataset.length - 1
+            })
+            .attr("height",function(d){
+                return d*4;
+            });
+        
+        svg.selectAll("text")
+            .data(dataset)
+            .enter()
+            .append("text")
+            .text(function(d){
+                return d;
+            })
+            .attr("fill","white")
+            .attr("x",function(d,i){
+                return i * (w/dataset.length)+23;
+            })
+            .attr("y",function(d){
+                return d*3
+            })
+    </script>
+
+<footer style="color: white;">COS30045 Data Visualisation</footer>
+<footer style="color: white;">Semester 4 2024</footer>
+<footer style="color: white;">Khoo Sheng Xiang</footer>
+</body>
+

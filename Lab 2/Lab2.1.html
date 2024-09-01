@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Data Visualisation"/>
+    <meta name="keywords"  content="HTML, CSS, D3"/>
+    <meta name="author" content="Khoo Sheng Xiang">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 2.1 D3 Data-Binding</title>
+    
+    <script src="https://d3js.org/d3.v7.min.js">
+
+    </script>
+
+</head>
+<body style="background-color: rgb(32, 29, 29);">
+    <a href="../shengxiang_main.html" class="lab-button">Home</a>
+    <a href="Lab2.1.html" class="lab-button">Lab 2.1</a>
+    <a href="Lab2.2.html" class="lab-button">Lab 2.2</a>
+    <a href="Lab2.3.html" class="lab-button">Lab 2.3</a>
+    <a href="Lab2.4.html" class="lab-button">Lab 2.4</a>
+    
+    <h1 style="color: white;">The d3 journey stars here</h1>
+    <script>
+
+        var dataset=[14,5,26,23,9];
+        var color1=d3.color("red");
+        //example of murray
+        d3.select("body").selectAll("p")// Select the body of the document //D3
+        .data(dataset)
+        .enter()
+        .append("p") //Append a paragraph element to the element selected previously(example: the body) //D3
+        //.text("New paragraph!"); //D3
+
+        .style("color",function(d){
+        if (d>10){
+            return"red"
+        }
+        else{
+            return"white"
+        }
+    })
+        .text(function(d){
+            if(d>10){
+                return"Warning:NAME watched" +d+"cat videos today.";
+            }
+            else {
+                return"NAME watched"+d+"cat videos today.";
+            }
+        });
+
+    </script>
+    <br>
+    <footer style="color: white;">COS30045 Data Visualisation</footer>
+	<footer style="color: white;">Semester 4 2024</footer>
+	<footer style="color: white;">Khoo Sheng Xiang</footer>
+</body>
+</html>
