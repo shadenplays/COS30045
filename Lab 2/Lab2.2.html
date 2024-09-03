@@ -42,7 +42,7 @@
                 return i * (w/dataset.length);
             })
             .attr("y",function(d){
-                return 2;
+                return h-d*4;
             })
             .attr("width",function(d){
                 return w/dataset.length - 1
@@ -63,7 +63,7 @@
                 return i * (w/dataset.length)+23;
             })
             .attr("y",function(d){
-                return d*3
+                return h-d*4+15
             })
     </script>
 
