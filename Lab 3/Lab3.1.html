@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="description" content="Data Visualisation"/>
+    <meta name="keywords"  content="HTML, CSS, D3"/>
+    <meta name="author" content="Khoo Sheng Xiang">
+    <link rel="stylesheet" href="style.css">
+    <title>Task 3.1 Scaling your charts</title>
+
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body style="background-color: rgb(32, 29, 29);">
+
+<a href="../shengxiang_main.html" class="lab-button">Home</a>
+<a href="Lab3.1.html" class="lab-button">Lab 3.1</a>
+<a href="Lab3.2.html" class="lab-button">Lab 3.2</a>
+
+
+<h1 style="color:white;">Drawing with Scatter Plot</h1>
+
+<script>
+    var w=600;
+    var h=150;
+    var padding =50;
+
+    var dataset=[[5,20],[500,90],[250,50],[100,33],[330,95],[410,12],[475,44],[25,67],[85,21],[220,88]];
+
+    var xScale = d3.scaleLinear()
+        .domain([d3.min(dataset,function(d){
+            return d[0];
+        }),
+        d3.max(dataset, function(d){
+            return d[0];
+        })])
+        .range([padding,w-padding]);
+
+    var yScale = d3.scaleLinear()
+        .domain([d3.min(dataset, function(d) { return d[1]; }), d3.max(dataset, function(d) { return d[1]; })])
+        .range([padding,h - padding]);
+
+    var svg =d3.select("body")
+        .append("svg")
+        .attr("width",w)
+        .attr("height",h);
+
+    svg.append("rect")
+        .attr("width", w)
+        .attr("height", h)
+        .attr("fill", "lightgray");
+
+    svg.selectAll("circle")
+        .data(dataset)
+        .enter()
+        .append("circle")
+        .attr("cx",function(d,i){
+            return xScale(d[0])-15;
+        })
+        .attr("cy",function(d){
+            return h- yScale(d[1]);
+        })
+        .attr("r",5)
+        .attr("fill", function (d) {
+            if (d[0] == d3.max(dataset, function(d) { return d[0];})) { // Fixed variable name
+                return "red";
+            }
+            return "black";
+        });
+
+    svg.selectAll("text")
+        .data(dataset)
+        .enter()
+        .append("text")
+        .text(function(d){
+            return d[0]+","+d[1];
+        })
+        .attr("fill","white")
+        .attr("x",function(d,i){
+            return xScale(d[0])-15 ;
+        })
+        .attr("y",function(d){
+            return h- yScale(d[1])-10;
+        })
+        .style("font-size", "10px");
+
+
+</script>
+
+<footer style="color: white;">COS30045 Data Visualisation</footer>
+<footer style="color: white;">Semester 4 2024</footer>
+<footer style="color: white;">Khoo Sheng Xiang</footer>
+</body>
+
