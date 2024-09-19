@@ -18,13 +18,14 @@
 
 
 <h1 style="color:white;">Drawing with Scatter Plot</h1>
+<h1 style="color:white;">The following is a modified version of original Lab 3.2 with Axis Label</h1>
 
 <script>
   var w=600;
   var h=300;
   var padding =50;
 
-  var dataset=[[5,20],[500,90],[250,50],[100,33],[330,95],[410,12],[475,44],[25,67],[85,21],[220,88]];
+  var dataset=[[2,8],[3,5],[5,17],[6,6],[6,12],[7,20],[8,22],[10,11],[5,12],[6,16]];
 
   var xScale = d3.scaleLinear()
           .domain([d3.min(dataset,function(d){
@@ -85,7 +86,6 @@
 
   var xAxis = d3.axisBottom(xScale)
           .ticks(5)
-          .tickValues([25,50,100,150,200,250,300,350,400,450,500]);
   var yAxis = d3.axisLeft(yScale)
 
   svg.append("g")
@@ -95,6 +95,22 @@
   svg.append("g")
           .attr("transform", "translate(" + padding + ",0)")
           .call(yAxis);
+  // X-axis label
+  svg.append("text")
+          .attr("text-anchor", "middle")
+          .attr("x", w / 2)
+          .attr("y", h - 10)  // Positioning it below the x-axis
+          .text("Tree Age (year)")
+          .attr("fill", "black");
+
+  // Y-axis label
+  svg.append("text")
+          .attr("text-anchor", "middle")
+          .attr("transform", "rotate(-90)")
+          .attr("x", -h / 2)
+          .attr("y", 15)  // Positioning it next to the y-axis
+          .text("Tree Height (m)")
+          .attr("fill", "black");
 
 </script>
 
