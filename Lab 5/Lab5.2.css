@@ -1,0 +1,75 @@
+#chart-container {
+    width: 30%;
+    height: auto;
+    display: flex;
+    background-color: lightgray; /* Center the chart container */
+}
+
+#button-container {
+    /* Center align the buttons */
+    margin-top: 20px; /* Add some vertical space between the chart container and the button container */
+}
+
+footer {
+    margin-top: 10px;
+}
+
+.lab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}
+
+/* Update Data Button - Primary Color */
+#update-data {
+    background-color: #28a745; /* Green */
+}
+
+#update-data:hover {
+    background-color: #218838; /* Darker Green on Hover */
+}
+
+/* Transition 1 Button - Secondary Color */
+#trans1 {
+    background-color: #17a2b8; /* Teal */
+}
+
+#trans1:hover {
+    background-color: #138496; /* Darker Teal on Hover */
+}
+
+/* Transition 2 Button - Alert Color */
+#trans2 {
+    background-color: #ffc107; /* Yellow */
+    color: black; /* Black text for better readability */
+}
+
+#trans2:hover {
+    background-color: #e0a800; /* Darker Yellow on Hover */
+}
+

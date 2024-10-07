@@ -1,0 +1,63 @@
+#add-value {
+    background-color: #007bff; /* Blue */
+}
+
+#add-value:hover {
+    background-color: #0056b3; /* Darker Blue on Hover */
+}
+
+/* Remove Value Button - Orange */
+#remove-value {
+    background-color: #ff7f0e; /* Orange */
+}
+
+#remove-value:hover {
+    background-color: #e06b0c; /* Darker Orange on Hover */
+}
+
+#chart-container {
+    width: 30%;
+    height: auto;
+    display: flex;
+    background-color: lightgray; /* Center the chart container */
+}
+
+#button-container {
+    /* Center align the buttons */
+    margin-top: 20px; /* Add some vertical space between the chart container and the button container */
+}
+
+footer {
+    margin-top: 10px;
+}
+
+.lab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+.button {
+    padding: 12px 24px;
+    font-size: 16px;
+    margin: 10px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+    color: white;
+    font-weight: bold;
+}

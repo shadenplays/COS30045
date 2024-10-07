@@ -1,0 +1,41 @@
+.lab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.lab-button:hover {
+    background-color: #0056b3;
+}
+
+#chart-container {
+    width: 30%;
+    height: auto;
+    display: flex;
+    background-color: lightgray;
+}
+#button-container {
+    margin-top: -280px; /* Adds some vertical space between the chart container and the button */
+    margin-bottom: 10px;
+    padding-left: 20px; /* Adds some horizontal padding to line up with the chart if needed */
+
+}
+rect {
+    stroke: #fff; /* Just to visually separate the bars */
+}
+
+#update-data {
+    background-color: #28a745; /* Green */
+}
+
+#update-data:hover {
+    background-color: #218838; /* Darker Green on Hover */
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8"/>
+<head>
+    <!-- Meta tags providing information about the page -->
+    <meta name="description" content="Data Visualisation"/>
+    <meta name="keywords"  content="HTML, CSS, D3"/>
+    <meta name="author" content="Khoo Sheng Xiang">
+
+    <!-- Link to the stylesheet for Lab 5.2 -->
+    <link rel="stylesheet" href="Lab5.2.css">
+
+    <!-- Page title -->
+    <title>Task 5.2 D3 Transitions</title>
+
+    <!-- D3 JavaScript library for creating charts -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- Custom JavaScript file containing data visualisation logic -->
+    <script src="Lab5.2.js"></script>
+</head>
+
+<body style="background-color: rgb(32, 29, 29);">
+<!-- Navigation buttons to move between different lab exercises -->
+<a href="../index.html" class="lab-button">Home</a>
+<a href="Lab5.1.html" class="lab-button">Lab 5.1</a>
+<a href="Lab5.2.html" class="lab-button">Lab 5.2</a>
+<a href="Lab5.3.html" class="lab-button">Lab 5.3</a>
+
+<!-- Main header for the lab exercise -->
+<h1 style="color: white;">Update and Transitions</h1>
+
+<!-- Container for the chart visualisation -->
+<div id="chart-container"></div>
+
+<!-- Container for buttons to trigger data updates and transitions -->
+<div id="button-container">
+    <button id="update-data">Update Data</button>
+    <button id="trans1">Transition 1</button>
+    <button id="trans2">Transition 2</button>
+</div>
+
+<!-- Display the current transition being applied -->
+<div id="current-transition" style="color: white;font-weight: bold; margin-top: 10px;">
+    Current Transition: None
+</div>
+
+<!-- Footer information about the course and author -->
+<footer style="color: white;">COS30045 Data Visualisation</footer>
+<footer style="color: white;">Semester 4 2024</footer>
+<footer style="color: white;">Khoo Sheng Xiang</footer>
+</body>
+</html>
