@@ -1,0 +1,23 @@
+#chart {
+    /* Set fixed width and height for the chart container */
+    width: 500px;
+    height: 300px;
+}
+.lab-button {
+    /* Style for navigation buttons */
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff; /* Primary blue color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Change background color when hovering over buttons */
+.lab-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}

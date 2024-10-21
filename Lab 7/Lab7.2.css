@@ -1,0 +1,29 @@
+.lab-button {
+    padding: 10px 20px; /* Adds padding to the buttons for better spacing */
+    font-size: 16px; /* Sets the font size of the button text */
+    margin: 10px; /* Adds space around the buttons */
+    color: white; /* Text color of the buttons */
+    background-color: #007bff; /* Blue background color for the buttons */
+    border: none; /* Removes the border around the button */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the mouse pointer to indicate the button is clickable */
+    text-decoration: none; /* Removes the underline from the button */
+    display: inline-block; /* Makes the button behave like an inline element while retaining block-level properties */
+}
+
+/* Hover effect for lab navigation buttons */
+.lab-button:hover {
+    background-color: #0056b3; /* Changes the button's background color when hovered */
+}
+
+.chart-container {
+    width: 35%; /* Sets the width of the chart container */
+    height: auto; /* Allows the height to adjust automatically */
+    display: flex; /* Applies flexbox for layout control */
+    background-color: lightgray; /* Light gray background for the chart container */
+}
+
+#chart {
+    width: 600px; /* Width of the chart area */
+    height: 300px; /* Height of the chart area */
+}

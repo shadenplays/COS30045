@@ -1,0 +1,65 @@
+/* Class for navigation buttons */
+.lab-button {
+    padding: 10px 20px;  /* Adds space inside the button */
+    font-size: 16px;  /* Sets the font size */
+    margin: 10px;  /* Adds space around the button */
+    color: white;  /* Text color */
+    background-color: #007bff;  /* Button background color (blue) */
+    border: none;  /* Removes default border */
+    border-radius: 5px;  /* Rounds the button's corners */
+    cursor: pointer;  /* Changes the cursor to a pointer when hovering */
+    text-decoration: none;  /* Removes underline from button text */
+    display: inline-block;  /* Allows buttons to appear side by side */
+}
+
+/* Hover effect for lab navigation buttons */
+.lab-button:hover {
+    background-color: #0056b3;  /* Changes background color on hover */
+}
+
+/* Container for the chart */
+.chart-container {
+    width: 35%;  /* Set width of the container */
+    height: auto;  /* Height adjusts automatically */
+    display: flex;  /* Makes the container flexible, allows chart to be responsive */
+    background-color: lightgray;  /* Adds a light gray background to the chart container */
+}
+
+/* Specific styles for the chart */
+#chart {
+    width: 600px;  /* Fixed width for the chart */
+    height: 300px;  /* Fixed height for the chart */
+}
+
+/* Styles for the line in the chart */
+.line {
+    fill: none;  /* No fill for the line, ensures it's transparent inside */
+    stroke: slategrey;  /* The color of the line */
+    stroke-width: 1.5;  /* Thickness of the line */
+}
+
+/* Styles for the area in the chart */
+.area {
+    fill: slategrey;  /* The color of the area */
+    opacity: 0.6;  /* Slight transparency for the area */
+}
+
+/* Styles for the horizontal line marking 500,000 unemployed */
+.halfMilMark {
+    stroke: red;  /* Red color for the mark line */
+    stroke-width: 1;  /* Thickness of the line */
+    stroke-dasharray: 4 2;  /* Dotted line appearance */
+}
+
+/* Label for the half-million mark */
+.halfMilLabel {
+    fill: red;  /* Red text */
+    font-size: 12px;  /* Small font size */
+}
+
+/* Overall body styling */
+body {
+    background-color: #222;  /* Dark background for the entire body */
+    color: white;  /* White text color for readability */
+    font-family: Arial, sans-serif;  /* Font for the page */
+}

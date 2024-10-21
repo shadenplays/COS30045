@@ -1,0 +1,23 @@
+#chart {
+    /* Set fixed width and height for the chart container (larger than Lab8.1) */
+    width: 500px;
+    height: 400px;
+}
+.lab-button {
+    /* Same button styles as Lab8.1 */
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Hover effect for navigation buttons */
+.lab-button:hover {
+    background-color: #0056b3; /* Darker blue when hovered */
+}

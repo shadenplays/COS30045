@@ -1,0 +1,31 @@
+.lab-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    margin: 10px;
+    color: white;
+    background-color: #007bff; /* Blue background for buttons */
+    border: none;
+    border-radius: 5px; /* Rounded button corners */
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-block; /* Display buttons inline */
+}
+
+/* Hover effect for lab navigation buttons */
+.lab-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Container for chart area */
+.chart-container {
+    width: 35%;
+    height: auto;
+    display: flex;
+    background-color: lightgray; /* Background for chart container */
+}
+
+/* Chart dimensions */
+#chart {
+    width: 600px;
+    height: 300px;
+}
