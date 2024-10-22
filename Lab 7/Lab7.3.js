@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
     var keys = ["apples", "oranges", "grapes"]; // Define keys for stacked data
 
     // Step 2: Set up chart dimensions
-    var margin = { top: 20, right: 20, bottom: 30, left: 50 };
+    var margin = { top: 20, right: 200, bottom: 30, left: 50 };
     var width = 600 - margin.left - margin.right;
     var height = 300 - margin.top - margin.bottom;
 
@@ -83,4 +83,30 @@ document.addEventListener("DOMContentLoaded", function() {
         .attr("stroke", "white");
     svg.selectAll(".tick line")
         .attr("stroke", "white");
+
+// Filter the dataset and adjust the legendKeys to include only the desired variables
+    var legendKeys = ["Apple", "Orange", "Grape"];
+    var legendColor = d3.scaleOrdinal().domain(legendKeys).range(d3.schemeSet2.slice(0,3)); // Limiting the color range to the first three
+
+    // Add dots
+    svg.selectAll("mydots")
+        .data(legendKeys)
+        .enter()
+        .append("circle")
+        .attr("cx", 370)
+        .attr("cy", function(d,i){ return i * 20}) // Positioning each dot
+        .attr("r", 7)
+        .style("fill", function(d,i){ return color(i)});
+
+    // Add labels
+    svg.selectAll("mylabels")
+        .data(legendKeys)
+        .enter()
+        .append("text")
+        .attr("x",400)
+        .attr("y", function(d,i){ return i*20}) // Align text with dots
+        .style("fill", function(d,i){ return color(i)})
+        .text(function(d){ return d})
+        .attr("text-anchor", "left")
+        .style("alignment-baseline", "middle");
 });

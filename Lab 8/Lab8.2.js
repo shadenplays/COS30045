@@ -76,8 +76,22 @@ function init() {
                     .attr("cy", function(d) {
                         return projection([d.lon, d.lat])[1];  // Calculate y coordinate using projection
                     })
-                    .attr("r", "2px")  // Set radius of circle
-                    .attr("fill", "red");  // Fill circle with red color
+                    .attr("r", "8px")  // Set radius of circle
+                    .attr("fill", "red")
+                    .on("mouseover", function(event, d) {
+                        svg.append("text")  // Display the city name
+                            .attr("x",projection([d.lon,+d.lat])[0])
+                            .attr("y",projection([d.lon,+d.lat])[1])
+                            .attr("class","tooltip")
+                            .attr("text-anchor", "middle")
+                            .text(d.place)
+                            .style("fill","white")
+                            .style("font-size", "14px")
+
+                    })
+                    .on("mouseout", function(){
+                        svg.selectAll(".tooltip").remove();
+                    });
             });
         }).catch(function(error) {
             console.error("Error loading GeoJSON:", error);
